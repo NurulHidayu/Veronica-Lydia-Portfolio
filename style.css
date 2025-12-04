@@ -172,4 +172,31 @@ footer { text-align: center; color: var(--muted); padding: 1.2rem; }
   .menu-toggle { display: block; }
   nav ul { display: none; position: absolute; background: var(--card); right: 1.2rem; top: 60px; flex-direction: column; padding: 1rem; border-radius: 12px; }
   nav ul.open { display: flex; }
+} 
+
+/* ===== NEON HOVER GLOW EFFECTS ===== */
+
+.nav-link:hover,
+.btn-primary:hover,
+.portfolio-item:hover {
+  box-shadow: 0 0 20px rgba(3, 225, 255, 0.7);
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
+
+.service-card:hover,
+.social-btn:hover {
+  box-shadow: 0 0 25px rgba(3, 225, 255, 0.9);
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Portfolio image hover zoom */
+.portfolio-item img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.2);
 }
