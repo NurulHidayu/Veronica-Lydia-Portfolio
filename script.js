@@ -19,9 +19,9 @@ document.querySelectorAll('.nav-link').forEach(link => {
 
 
 // ===============================
-// 2) ACTIVE NAV LINK ON SCROLL
+// 2) ACTIVE NAV LINK ON SCROLL (SCROLLSPY)
 // ===============================
-const sections = document.querySelectorAll('main section[id]');
+const sections = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-link');
 
 const observer = new IntersectionObserver(
@@ -77,38 +77,7 @@ if (roleElement) typeLoop();
 
 
 // ===============================
-// 4) PORTFOLIO PROJECT DATA & POPUP
-// ===============================
-const projects = [
-  {
-    title: 'Mythborne 3D Game',
-    description: 'An interactive 3D mythborne game created in Unity focusing on atmosphere, narrative and basic gameplay mechanics.'
-  },
-  {
-    title: 'ART Transportation App',
-    description: 'A mobile UI/UX prototype designed in Figma for ART public transport with booking and ticket UI flows.'
-  },
-  {
-    title: 'UI & Data Mini Projects',
-    description: 'Course mini projects combining UI layouts, SQL queries and simple API usage.'
-  },
-  {
-    title: 'Volunteer & Event Design',
-    description: 'Digital posters and social graphics designed for university and community programmes.'
-  },
-  {
-    title: 'Programming Exercises',
-    description: 'C++, Java and Python exercises focused on logic, algorithms and problem solving.'
-  },
-  {
-    title: 'Exploratory Web Pages',
-    description: 'Responsive web layouts using only HTML, CSS and vanilla JavaScript.'
-  }
-];
-
-
-// ===============================
-// 5) CONTACT FORM VALIDATION (FRONT-END ONLY)
+// 4) CONTACT FORM VALIDATION (FRONT-END ONLY)
 // ===============================
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
@@ -146,6 +115,24 @@ if (contactForm) {
 
 
 // ===============================
+// 5) SCROLL REVEAL ANIMATION
+// ===============================
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    const winHeight = window.innerHeight;
+
+    if (top < winHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+});
+
+
+// ===============================
 // 6) FOOTER YEAR AUTO UPDATE
 // ===============================
 document.getElementById('year').textContent = new Date().getFullYear();
+
