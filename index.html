@@ -5,17 +5,15 @@
   <title>Veronica Lydia | Multimedia Computing Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Veronica Lydia Anak Sandin, Multimedia Computing student specializing in UI/UX, Unity and web development." />
-
-  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
   <!-- ================ HEADER / NAV ================= -->
   <header>
     <div class="nav-container">
       <div class="logo">Veronica <span>Lydia</span></div>
-
       <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
 
       <nav>
@@ -30,164 +28,166 @@
     </div>
   </header>
 
-  <!-- ================ MAIN ================= -->
-  <main>
-    <section id="home" class="layout">
-      <!-- LEFT PANEL -->
-      <div class="panel hero reveal">
+  <!-- ================ HOME ================= -->
+  <section id="home" class="layout reveal">
+    <div class="panel hero">
 
-<section id="services" class="card-section reveal">
+      <p class="hero-heading">Hello, it's me</p>
 
-<section id="portfolio" class="card-section reveal">
+      <h1 class="hero-main">
+        <span>Veronica Lydia</span>
+        <span class="highlight">Anak Sandin</span>
+      </h1>
 
-<section id="contact" class="contact reveal">
+      <p class="hero-role">
+        <span id="typed-role">Multimedia Computing Student</span>
+      </p>
+
+      <p class="hero-summary">
+        Multimedia Computing student with a strong computer science foundation,
+        interested in how people think and interact with digital products.
+        I enjoy combining programming, data thinking, Unity and UI/UX design to
+        create intuitive, engaging applications.
+      </p>
+
+      <div class="social-row">
+        <a href="mailto:veronicalydia505@gmail.com" class="social-btn">✉</a>
+        <a href="https://www.linkedin.com/in/veronicalydia29" target="_blank" class="social-btn">in</a>
+      </div>
+
+      <a href="cv/Veronica_Lydia_CV.pdf" download class="btn-primary">
+        Download CV
+      </a>
+
+    </div>
+
+    <div class="panel-right">
+      <aside class="photo-card">
+        <div class="photo-wrapper">
+          <div class="hex">
+            <img src="images/veronica-profile.jpg" alt="Portrait of Veronica Lydia" />
+          </div>
+          <div class="hex-border"></div>
+        </div>
+        <p class="photo-name">Multimedia Computing • UI/UX • Unity</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================ ABOUT ================= -->
+  <section id="about" class="layout reveal">
+    <div class="panel about-block">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <p class="about-text">
+        I am currently pursuing a Bachelor in Computer Science (Multimedia Computing)
+        with Honours at Universiti Malaysia Sarawak. I enjoy building UI designs,
+        Unity projects and interactive web applications.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================ SERVICES ================= -->
+  <section id="services" class="layout reveal">
+    <div class="panel card-section">
+
+      <p class="subheading">Our Services</p>
+      <h2 class="section-title">What I Like To Do</h2>
+
+      <div class="cards-grid">
+        <article class="service-card">
+          <h3 class="service-title">UI / UX Design</h3>
+          <p>Wireframing, prototyping and visual design using Figma.</p>
+          <span class="badge">Figma</span>
+        </article>
+
+        <article class="service-card">
+          <h3 class="service-title">Unity Game Dev</h3>
+          <p>Building 2D/3D experiences with Unity and C#.</p>
+          <span class="badge">Unity • C#</span>
+        </article>
+
+        <article class="service-card">
+          <h3 class="service-title">Web Development</h3>
+          <p>Responsive websites using HTML, CSS, and JavaScript.</p>
+          <span class="badge">HTML • CSS • JS</span>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================ PORTFOLIO ================= -->
+  <section id="portfolio" class="layout reveal">
+    <div class="panel card-section">
+
+      <p class="subheading">Latest Project</p>
+      <h2 class="section-title">Recent Work</h2>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+          <img src="images/project1.jpg" alt="Unity 3D Game Project">
+          <span>Mythborne Unity Game</span>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="images/project2.jpg" alt="ART Figma UI Design">
+          <span>ART Transportation App</span>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="images/project3.jpg" alt="Web UI Mini Project">
+          <span>Web & Data Mini Project</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================ CONTACT ================= -->
+  <section id="contact" class="layout reveal">
+    <div class="panel contact-card">
+
+      <p class="subheading">Contact Me</p>
+      <h2>Let’s Work Together</h2>
+
+      <form id="contactForm" novalidate>
+        <div>
+          <label>Full Name</label>
+          <input id="fullname" type="text" required />
+        </div>
 
         <div>
-          <p class="hero-heading">Hello, it's me</p>
-          <h1 class="hero-main">
-            <span>Veronica Lydia</span>
-            <span class="highlight">Anak Sandin</span>
-          </h1>
-          <p class="hero-role"><span id="typed-role">Multimedia Computing Student</span></p>
-          <p class="hero-summary">
-            Multimedia Computing student with a strong computer science
-            foundation, interested in how people think and interact with
-            digital products. I enjoy combining programming, data thinking,
-            Unity and UI/UX design to create intuitive, engaging applications.
-          </p>
-
-          <div class="social-row">
-            <a href="mailto:veronicalydia505@gmail.com" class="social-btn">✉</a>
-            <a href="https://www.linkedin.com/in/veronicalydia29" target="_blank" class="social-btn">in</a>
-          </div>
-
-         <a href="cv/Veronica_Lydia_CV.pdf" download class="btn-primary">
-  Download CV
-</a>
-
+          <label>Email</label>
+          <input id="email" type="email" required />
         </div>
 
-        <!-- ABOUT PREVIEW -->
-        <div id="about" class="about-block">
-          <h2 class="section-title">About <span>Me</span></h2>
-          <p class="about-text">
-            I am currently pursuing a Bachelor in Computer Science
-            (Multimedia Computing) with Honours at Universiti Malaysia
-            Sarawak. I enjoy working on projects that mix visuals and logic:
-            designing UI in Figma, building interactive experiences in Unity,
-            and implementing them with clean code.
-          </p>
+        <div class="full">
+          <label>Message</label>
+          <textarea id="message" required></textarea>
         </div>
-      </div>
 
-      <!-- RIGHT PANEL -->
-      <div class="panel-right">
-        <!-- PHOTO -->
-        <aside class="photo-card">
-          <div class="photo-wrapper">
-            <div class="hex">
-              <img src="images/veronica-profile.jpg" alt="Portrait of Veronica Lydia" />
-            </div>
-            <div class="hex-border"></div>
-          </div>
-          <p class="photo-name">Multimedia Computing • UI/UX • Unity</p>
-        </aside>
+        <div class="submit-row">
+          <button type="submit" class="btn-primary">Send Message</button>
+          <p id="formStatus" class="status"></p>
+        </div>
+      </form>
 
-        <!-- SERVICES -->
-        <section id="servicess" class="card-section">
-          <p class="subheading">Our Services</p>
-          <h2 class="section-title">What I Like To Do</h2>
+    </div>
 
-          <div class="cards-grid">
-            <article class="service-card">
-              <h3 class="service-title">UI / UX Design</h3>
-              <p>Wireframing, prototyping and visual design using Figma.</p>
-              <span class="badge">Figma</span>
-            </article>
-
-            <article class="service-card">
-              <h3 class="service-title">Unity Game Dev</h3>
-              <p>Building 2D/3D experiences with Unity and C#.</p>
-              <span class="badge">Unity • C#</span>
-            </article>
-
-            <article class="service-card">
-              <h3 class="service-title">Web Development</h3>
-              <p>Responsive websites using HTML, CSS, and JavaScript.</p>
-              <span class="badge">HTML • CSS • JS</span>
-            </article>
-          </div>
-        </section>
-
-        <!-- PORTFOLIO -->
-        <section id="portfolio" class="card-section">
-          <p class="subheading">Latest Project</p>
-          <h2 class="section-title">Recent Work</h2>
-          <div class="portfolio-grid reveal">
-
-  <div class="portfolio-item">
-    <img src="images/project1.jpg" alt="Unity 3D Game Project">
-    <span>Mythborne Unity Game</span>
-  </div>
-
-  <div class="portfolio-item">
-    <img src="images/project2.jpg" alt="ART Figma UI Design">
-    <span>ART Transportation App</span>
-  </div>
-
-  <div class="portfolio-item">
-    <img src="images/project3.jpg" alt="Web UI Mini Project">
-    <span>Web & Data Mini Project</span>
-  </div>
-
-</div>
-
-        </section>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-      <div class="contact-card">
-        <p class="subheading">Contact Me</p>
-        <h2>Let’s Work Together</h2>
-
-        <form id="contactForm" novalidate>
-          <div>
-            <label>Full Name</label>
-            <input id="fullname" type="text" required />
-          </div>
-          <div>
-            <label>Email</label>
-            <input id="email" type="email" required />
-          </div>
-
-          <div class="full">
-            <label>Message</label>
-            <textarea id="message" required></textarea>
-          </div>
-
-          <div class="submit-row">
-            <button type="submit" class="btn-primary">Send Message</button>
-            <p id="formStatus" class="status"></p>
-          </div>
-        </form>
-      </div>
-
-      <aside class="contact-info-card">
-        <h3>Contact Details</h3>
-        <p><strong>Email:</strong> veronicalydia505@gmail.com</p>
-        <p><strong>Phone:</strong> 017-741 1755</p>
-        <p><strong>Location:</strong> Masai, Johor</p>
-      </aside>
-    </section>
-  </main>
+    <aside class="contact-info-card">
+      <h3>Contact Details</h3>
+      <p><strong>Email:</strong> veronicalydia505@gmail.com</p>
+      <p><strong>Phone:</strong> 017-741 1755</p>
+      <p><strong>Location:</strong> Masai, Johor</p>
+    </aside>
+  </section>
 
   <footer>
     © <span id="year"></span> Veronica Lydia Anak Sandin
   </footer>
 
-  <!-- External JavaScript -->
   <script src="script.js"></script>
+
 </body>
 </html>
