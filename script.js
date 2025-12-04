@@ -106,24 +106,6 @@ const projects = [
   }
 ];
 
-const portfolioGrid = document.getElementById('portfolioGrid');
-
-if (portfolioGrid) {
-  projects.forEach((project) => {
-    const item = document.createElement('button');
-    item.type = 'button';
-    item.className = 'portfolio-item';
-    item.setAttribute('aria-label', project.title);
-    item.innerHTML = `<span>${project.title}</span>`;
-
-    item.addEventListener('click', () => {
-      alert(project.title + '\n\n' + project.description);
-    });
-
-    portfolioGrid.appendChild(item);
-  });
-}
-
 
 // ===============================
 // 5) CONTACT FORM VALIDATION (FRONT-END ONLY)
