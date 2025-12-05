@@ -82,9 +82,10 @@ nav a:hover {
   margin: 1.5rem auto;
   padding: 0 1.2rem 2.5rem;
   display: grid;
-  grid-template-columns: 2fr 1.3fr;
-  gap: 1.5rem;
+  grid-template-columns: 1.2fr 1.8fr; /* photo smaller, text bigger */
+  gap: 2rem; /* nicer spacing */
 }
+
 
 .panel {
   background: var(--card);
