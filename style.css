@@ -443,6 +443,16 @@ footer {
   to   { width: var(--level); }
 }
 
+.services-section,
+.portfolio-section {
+  max-width: 1100px;    /* SAME WIDTH AS HOME */
+  margin: 3rem auto;    /* CENTER IT */
+  padding: 2rem 1.5rem;
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
 
 /* ================= RESPONSIVE ================= */
 
