@@ -133,17 +133,72 @@ nav a:hover { background: var(--accent-soft); color: white; }
 .section-title span { color: var(--accent); }
 .about-text { color: var(--muted); margin-top: 0.4rem; }
 
-/* RIGHT PANEL */
-.panel-right { display: grid; gap: 1.5rem; }
+/* PREMIUM PROFILE SECTION UPGRADE */
+.panel-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
 
-.photo-card { text-align: center; }
-.photo-wrapper { max-width: 200px; margin: auto; }
+.photo-card {
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.photo-wrapper {
+  max-width: 230px;
+  margin: auto;
+  position: relative;
+}
+
 .hex {
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(3,225,255,0.7);
+  position: relative;
+  transition: 0.5s ease;
+  border-radius: 20px;
 }
-.photo-name { margin-top: 0.7rem; font-size: 0.8rem; color: var(--muted); }
+
+/* Floating hover effect */
+.photo-card:hover .hex {
+  transform: translateY(-12px) scale(1.05);
+}
+
+/* Neon animated glow behind the photo */
+.hex::before {
+  content: "";
+  position: absolute;
+  inset: -25px;
+  background: radial-gradient(circle, rgba(3,225,255,0.45), transparent 70%);
+  z-index: -1;
+  animation: auraPulse 4s ease-in-out infinite;
+  filter: blur(20px);
+}
+
+@keyframes auraPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Photo soft shadow */
+.hex img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(3,225,255,0.35));
+}
+
+/* Professional subtitle */
+.photo-name {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  text-align: center;
+  font-weight: 500;
+}
 
 .card-section { background: var(--bg-soft); border-radius: var(--radius-lg); padding: 1.5rem; }
 
