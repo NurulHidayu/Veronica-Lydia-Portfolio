@@ -164,19 +164,32 @@ nav a:hover { background: var(--accent-soft); color: white; }
   z-index: 2;          /* above glow */
 }
 
-/* the hex shows a rim (border) and internal padding so image doesn't touch edge */
 .hex {
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
   overflow: hidden;
-  border-radius: 20px;
-  transition: transform 0.5s ease, box-shadow 0.35s ease;
-  border: 6px solid rgba(0,255,255,0.18);   /* thicker subtle rim */
-  box-shadow: 0 8px 40px rgba(0,255,255,0.12);
-  padding: 14px;       /* IMPORTANT — creates inner gap */
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+  width: 320px;
+  height: 360px;
+  padding: 0;
+  background: #00eaff; /* neon turquoise background like example */
   position: relative;
-  z-index: 3;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 45px rgba(0, 255, 255, 0.8);
+} 
+
+/* Glow behind the hex */
+.photo-back-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: rgba(0, 255, 255, 0.55);
+  filter: blur(80px);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
 /* reduce image size inside hex so you see the rim & glow */
 .hex img {
