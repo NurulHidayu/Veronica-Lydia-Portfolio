@@ -659,6 +659,46 @@ nav a:hover {
   border: none;
 }
 
+/* Match height of both contact cards */
+#contact {
+  align-items: stretch; /* force both sides to equal height */
+}
+
+.contact-card,
+.contact-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* Polished Input Fields */
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  font-size: 1rem;
+  margin-top: 0.4rem;
+  transition: 0.25s ease;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(3,225,255,0.35);
+}
+
+.contact-card label {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.contact-card .submit-row {
+  margin-top: 1.2rem;
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media(max-width: 900px){
