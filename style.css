@@ -774,6 +774,16 @@ nav a:hover {
   margin-top: 1rem;
 }
 
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media(max-width: 900px){
