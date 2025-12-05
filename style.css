@@ -133,7 +133,7 @@ nav a:hover { background: var(--accent-soft); color: white; }
 .section-title span { color: var(--accent); }
 .about-text { color: var(--muted); margin-top: 0.4rem; }
 
-/* PREMIUM PROFILE HERO — Tweak so glow shows even with white photo */
+/* PREMIUM PROFILE HERO — Rounded Rectangle Version */
 .panel-right {
   display: flex;
   justify-content: center;
@@ -142,109 +142,66 @@ nav a:hover { background: var(--accent-soft); color: white; }
   position: relative;
 }
 
-/* stronger, bigger neon glow behind image */
+/* larger glowing aura behind photo */
 .photo-glow {
   position: absolute;
-  width: 360px;        /* larger so it peeks from behind */
-  height: 360px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: radial-gradient(circle at center, rgba(3,225,255,0.35) 0%, rgba(3,225,255,0.15) 30%, transparent 60%);
-  filter: blur(40px);
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(0,255,255,0.35), transparent 70%);
+  filter: blur(55px);
   z-index: -2;
   animation: softPulse 4s ease-in-out infinite;
-  pointer-events: none;
 }
 
-/* wrapper slightly larger to center and allow padding on hex */
+/* wrapper around the photo */
 .photo-wrapper {
-  max-width: 280px;    /* slightly larger */
-  margin: auto;
-  position: relative;
-  z-index: 2;          /* above glow */
-}
-
-.hex {
-  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
-  overflow: hidden;
-  width: 320px;
-  height: 360px;
-  padding: 0;
-  background: #00eaff; /* neon turquoise background like example */
-  position: relative;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 0 45px rgba(0, 255, 255, 0.8);
-} 
-
-/* Glow behind the hex */
-.photo-back-glow {
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  background: rgba(0, 255, 255, 0.55);
-  filter: blur(80px);
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-/* reduce image size inside hex so you see the rim & glow */
-.hex img {
-  width: 100%;
+  width: 280px;
   height: auto;
-  display: block;
-  /* shrink inside padding so white background doesn't touch the edge */
-  box-sizing: border-box;
-  transform-origin: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* PREMIUM rounded-rectangle frame */
+.photo-frame {
+  width: 280px;
+  height: 360px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #0a0f1e;
+  border: 3px solid rgba(0,255,255,0.6);
+  box-shadow: 0 0 45px rgba(0,255,255,0.4);
+  transition: 0.4s ease;
+}
+
+/* image inside frame */
+.photo-frame img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 6px;
-  /* subtle inner shadow to give depth */
-  filter: drop-shadow(0 8px 18px rgba(2,12,20,0.55));
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
 }
 
-/* hover: float and brighten glow */
-.photo-card:hover .hex {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 14px 60px rgba(0,255,255,0.18);
+/* hover effect */
+.photo-card:hover .photo-frame {
+  transform: translateY(-14px) scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.8);
 }
 
-/* role text */
+/* role text under the photo */
 .photo-role {
-  margin-top: 1.1rem;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.6px;
-  text-align: center;
+  margin-top: 1rem;
   color: var(--muted);
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
-/* keep previous pulse keyframes */
+/* glow animation */
 @keyframes softPulse {
   0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.12); }
+  50% { opacity: 1; transform: scale(1.15); }
 }
 
-
-.card-section { background: var(--bg-soft); border-radius: var(--radius-lg); padding: 1.5rem; }
-
-.cards-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
-}
-
-.service-card {
-  background: var(--card);
-  padding: 1rem;
-  border-radius: var(--radius-md);
-  transition: transform .3s, box-shadow .3s;
-}
-
-.service-title { font-weight: 600; }
-.badge { font-size: 0.7rem; color: var(--accent); }
 
 /* ================= PORTFOLIO ================= */
 
