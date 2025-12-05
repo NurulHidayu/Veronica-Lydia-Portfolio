@@ -429,13 +429,49 @@ team creating innovative multimedia solutions
 
     </div>
 
-    <aside class="contact-info-card">
-      <h3>Contact Details</h3>
-      <p><strong>Email:</strong> veronicalydia505@gmail.com</p>
-      <p><strong>Phone:</strong> 017-741 1755</p>
-      <p><strong>Location:</strong> Masai, Johor</p>
-    </aside>
-  </section>
+  <aside class="contact-info-card">
+
+  <h3>Contact Details</h3>
+
+  <!-- Email -->
+  <p class="contact-row">
+    <span class="contact-icon">📧</span>
+    <a href="mailto:veronicalydia505@gmail.com" class="contact-link">
+      veronicalydia505@gmail.com
+    </a>
+  </p>
+
+  <!-- Phone -->
+  <p class="contact-row">
+    <span class="contact-icon">📞</span>
+    <a href="tel:0177411755" class="contact-link">
+      017-741 1755
+    </a>
+  </p>
+
+  <!-- Location -->
+  <p class="contact-row">
+    <span class="contact-icon">📍</span>
+    <a href="#" onclick="openModal('map-modal')" class="contact-link">
+      Masai, Johor
+    </a>
+  </p>
+
+  <!-- Mini Google Map Preview -->
+  <div class="map-box" onclick="openModal('map-modal')">
+    <iframe 
+      src="https://www.google.com/maps?q=Masai+Johor&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- QR Button -->
+  <button class="qr-btn" onclick="openModal('qr-modal')">
+    Show QR Contact
+  </button>
+
+</aside>
+
 
   <footer>
     © <span id="year"></span> Veronica Lydia Anak Sandin
@@ -502,9 +538,33 @@ function closeModal(id) {
   document.getElementById(id).style.display = "none";
 }
 </script>
+    
+<!-- MAP MODAL -->
+<div id="map-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('map-modal')">&times;</span>
 
+    <h2>Masai, Johor</h2>
+    <iframe 
+      src="https://www.google.com/maps?q=Masai+Johor&output=embed"
+      class="big-map">
+    </iframe>
+  </div>
+</div>
+
+<!-- QR CODE MODAL -->
+<div id="qr-modal" class="modal">
+  <div class="modal-content qr-content">
+    <span class="close" onclick="closeModal('qr-modal')">&times;</span>
+
+    <h2>Scan to Contact Me</h2>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=mailto:veronicalydia505@gmail.com"
+         alt="QR Code" class="qr-img">
+
+    <p class="qr-text">Scan to send email or save contact</p>
+  </div>
+</div>
 <script src="script.js"></script>
-
   
 </body>
 </html>
