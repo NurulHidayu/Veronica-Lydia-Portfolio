@@ -82,7 +82,7 @@ nav a:hover {
   margin: 1.5rem auto;
   padding: 0 1.2rem 2.5rem;
   display: grid;
-  grid-template-columns: 1.2fr 1.8fr; /* photo smaller, text bigger */
+  grid-template-columns: 1.4fr 1.6fr;
   gap: 2rem; /* nicer spacing */
 }
 
