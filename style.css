@@ -133,10 +133,7 @@ nav a:hover { background: var(--accent-soft); color: white; }
 .section-title span { color: var(--accent); }
 .about-text { color: var(--muted); margin-top: 0.4rem; }
 
-/* ===========================
-   PREMIUM PROFILE HERO DESIGN
-   =========================== */
-
+/* PREMIUM PROFILE HERO — Tweak so glow shows even with white photo */
 .panel-right {
   display: flex;
   justify-content: center;
@@ -145,51 +142,65 @@ nav a:hover { background: var(--accent-soft); color: white; }
   position: relative;
 }
 
-/* Floating neon glow behind image */
+/* stronger, bigger neon glow behind image */
 .photo-glow {
   position: absolute;
-  width: 280px;
-  height: 280px;
-  background: radial-gradient(circle, rgba(0,255,255,0.35), transparent 70%);
+  width: 360px;        /* larger so it peeks from behind */
+  height: 360px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at center, rgba(3,225,255,0.35) 0%, rgba(3,225,255,0.15) 30%, transparent 60%);
   filter: blur(40px);
   z-index: -2;
   animation: softPulse 4s ease-in-out infinite;
+  pointer-events: none;
 }
 
-/* Wrap image */
+/* wrapper slightly larger to center and allow padding on hex */
 .photo-wrapper {
-  max-width: 240px;
+  max-width: 280px;    /* slightly larger */
   margin: auto;
   position: relative;
+  z-index: 2;          /* above glow */
 }
 
-/* Premium hex style */
+/* the hex shows a rim (border) and internal padding so image doesn't touch edge */
 .hex {
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
   overflow: hidden;
   border-radius: 20px;
-  transition: 0.5s ease;
-  border: 3px solid rgba(0,255,255,0.6);
-  box-shadow: 0 0 30px rgba(0,255,255,0.35);
+  transition: transform 0.5s ease, box-shadow 0.35s ease;
+  border: 6px solid rgba(0,255,255,0.18);   /* thicker subtle rim */
+  box-shadow: 0 8px 40px rgba(0,255,255,0.12);
+  padding: 14px;       /* IMPORTANT — creates inner gap */
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+  position: relative;
+  z-index: 3;
 }
 
-/* Image styling */
+/* reduce image size inside hex so you see the rim & glow */
 .hex img {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 0 8px rgba(0,255,255,0.3));
+  /* shrink inside padding so white background doesn't touch the edge */
+  box-sizing: border-box;
+  transform-origin: center;
+  object-fit: cover;
+  border-radius: 6px;
+  /* subtle inner shadow to give depth */
+  filter: drop-shadow(0 8px 18px rgba(2,12,20,0.55));
 }
 
-/* Hover effect */
+/* hover: float and brighten glow */
 .photo-card:hover .hex {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 0 40px rgba(0,255,255,0.55);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 14px 60px rgba(0,255,255,0.18);
 }
 
-/* Text under photo */
+/* role text */
 .photo-role {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.6px;
@@ -197,11 +208,12 @@ nav a:hover { background: var(--accent-soft); color: white; }
   color: var(--muted);
 }
 
-/* Soft glowing pulse animation */
+/* keep previous pulse keyframes */
 @keyframes softPulse {
   0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.15); }
+  50% { opacity: 1; transform: scale(1.12); }
 }
+
 
 .card-section { background: var(--bg-soft); border-radius: var(--radius-lg); padding: 1.5rem; }
 
