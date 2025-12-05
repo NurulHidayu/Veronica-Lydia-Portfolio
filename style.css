@@ -410,6 +410,13 @@ footer {
   padding: 2rem 1rem;
 }
 
+.skills-section {
+  max-width: 900px;
+  margin: 4rem auto;   /* auto = center horizontally */
+  padding: 2rem;
+}
+
+
 .skills-grid {
   display: grid;
   gap: 1rem;
