@@ -429,48 +429,43 @@ team creating innovative multimedia solutions
 
     </div>
 
-  <aside class="contact-info-card">
+<aside class="contact-info-card">
 
   <h3>Contact Details</h3>
 
-  <!-- Email -->
-  <p class="contact-row">
+  <!-- EMAIL -->
+  <div class="contact-row" onclick="window.location.href='mailto:veronicalydia505@gmail.com'">
     <span class="contact-icon">📧</span>
-    <a href="mailto:veronicalydia505@gmail.com" class="contact-link">
-      veronicalydia505@gmail.com
-    </a>
-  </p>
+    <span class="contact-link">veronicalydia505@gmail.com</span>
+  </div>
 
-  <!-- Phone -->
-  <p class="contact-row">
+  <!-- PHONE -->
+  <div class="contact-row" onclick="window.location.href='tel:0177411755'">
     <span class="contact-icon">📞</span>
-    <a href="tel:0177411755" class="contact-link">
-      017-741 1755
-    </a>
-  </p>
+    <span class="contact-link">017-741 1755</span>
+  </div>
 
-  <!-- Location -->
-  <p class="contact-row">
+  <!-- LOCATION -->
+  <div class="contact-row" onclick="openModal('map-modal')">
     <span class="contact-icon">📍</span>
-    <a href="#" onclick="openModal('map-modal')" class="contact-link">
-      Masai, Johor
-    </a>
-  </p>
+    <span class="contact-link">Masai, Johor</span>
+  </div>
 
-  <!-- Mini Google Map Preview -->
-  <div class="map-box" onclick="openModal('map-modal')">
-    <iframe 
+  <!-- MINI MAP PREVIEW -->
+  <div class="map-preview" onclick="openModal('map-modal')">
+    <iframe
       src="https://www.google.com/maps?q=Masai+Johor&output=embed"
       loading="lazy">
     </iframe>
   </div>
 
-  <!-- QR Button -->
-  <button class="qr-btn" onclick="openModal('qr-modal')">
+  <!-- QR CONTACT BUTTON -->
+  <button class="btn-primary" style="margin-top:1rem;" onclick="openModal('qr-modal')">
     Show QR Contact
   </button>
 
 </aside>
+
 
 
   <footer>
