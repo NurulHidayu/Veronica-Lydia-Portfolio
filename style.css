@@ -285,13 +285,19 @@ footer {
 .about-section,
 .education-section,
 .skills-section {
-  max-width: 900px;
-  margin: 3rem auto;   /* THIS centers the content */
-  padding: 2rem;
+  max-width: 1100px;   /* SAME WIDTH AS HOME SECTION */
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
 }
-.about-section { margin-top: 4rem; }
-.education-section { margin-top: 4rem; }
-.skills-section { margin-top: 4rem; }
+
+.about-section,
+.education-section,
+.skills-section {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
 
 /* ================= RESPONSIVE ================= */
 
