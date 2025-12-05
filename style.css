@@ -18,101 +18,6 @@
   margin: 0;
   padding: 0;
 }
-/* ================= ABOUT SECTION ================= */
-.about-section {
-  margin-top: 3rem;
-  padding: 2rem 1rem;
-}
-
-.about-text {
-  max-width: 750px;
-  color: var(--muted);
-  line-height: 1.7;
-  font-size: 1rem;
-  margin-top: 0.8rem;
-}
-
-
-/* ================= EDUCATION ================= */
-.education-section {
-  margin-top: 4rem;
-  padding: 2rem 1rem;
-}
-
-.edu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.edu-card {
-  background: var(--bg-soft);
-  padding: 1.5rem;
-  border-radius: 20px;
-  box-shadow: var(--shadow-soft);
-  transition: 0.3s;
-}
-
-.edu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(3,225,255,0.3);
-}
-
-.edu-card h3 {
-  margin-bottom: 0.4rem;
-}
-
-.edu-year {
-  display: inline-block;
-  margin-top: 0.7rem;
-  color: var(--accent);
-}
-
-
-/* ================= SKILLS ================= */
-.skills-section {
-  margin-top: 4rem;
-  padding: 2rem 1rem;
-}
-
-.skills-grid {
-  display: grid;
-  gap: 1rem;
-  max-width: 700px;
-}
-
-.skill p {
-  margin-bottom: 0.3rem;
-  font-weight: 500;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 12px;
-  background: #0a0f1f;
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-.skill-bar div {
-  height: 100%;
-  background: var(--accent);
-  border-radius: 999px;
-  transition: width 1s ease;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at bottom, #00f0ff33 0, #050816 55%);
-  color: var(--text);
-  min-height: 100vh;
-}
-
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
 
 /* ================= NAVBAR ================= */
 
@@ -435,6 +340,101 @@ footer {
   transform: translateY(0);
 }
 
+/* ================= ABOUT SECTION ================= */
+.about-section {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+}
+
+.about-text {
+  max-width: 750px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-top: 0.8rem;
+}
+
+
+/* ================= EDUCATION ================= */
+.education-section {
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.edu-card {
+  background: var(--bg-soft);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  transition: 0.3s;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(3,225,255,0.3);
+}
+
+.edu-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.edu-year {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: var(--accent);
+}
+
+
+/* ================= SKILLS ================= */
+.skills-section {
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 1rem;
+  max-width: 700px;
+}
+
+.skill p {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 12px;
+  background: #0a0f1f;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.skill-bar div {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 1s ease;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at bottom, #00f0ff33 0, #050816 55%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
 
 .reveal.active {
   opacity: 1;
