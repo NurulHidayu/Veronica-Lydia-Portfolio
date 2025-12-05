@@ -783,6 +783,14 @@ footer {
   display: block;
   margin: 0 auto;
 }
+.contact-section {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
 
 /* ================= RESPONSIVE ================= */
 
