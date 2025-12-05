@@ -405,6 +405,36 @@ footer {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+/* Fix oversized SVG icons in Skills */
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.skill-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 10px;
+  background: rgba(3,225,255,0.15);
+  border: 2px solid rgba(3,225,255,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(3,225,255,0.35);
+  color: var(--accent);
+}
+
+/* The key fix: FORCE SVG to be small */
+.skill-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
 
 
 /* Animation */
