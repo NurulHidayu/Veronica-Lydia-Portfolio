@@ -281,6 +281,18 @@ footer {
   padding: 1.2rem;
 }
 
+/* Center ABOUT, EDUCATION, SKILLS sections */
+.about-section,
+.education-section,
+.skills-section {
+  max-width: 900px;
+  margin: 3rem auto;   /* THIS centers the content */
+  padding: 2rem;
+}
+.about-section { margin-top: 4rem; }
+.education-section { margin-top: 4rem; }
+.skills-section { margin-top: 4rem; }
+
 /* ================= RESPONSIVE ================= */
 
 @media(max-width: 900px) {
@@ -440,14 +452,4 @@ img { max-width: 100%; display: block; }
   opacity: 1;
   transform: translateY(0);
 }
-/* Center ABOUT, EDUCATION, SKILLS sections */
-.about-section,
-.education-section,
-.skills-section {
-  max-width: 900px;
-  margin: 3rem auto;   /* THIS centers the content */
-  padding: 2rem;
-}
-.about-section { margin-top: 4rem; }
-.education-section { margin-top: 4rem; }
-.skills-section { margin-top: 4rem; }
+
