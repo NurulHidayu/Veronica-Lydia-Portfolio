@@ -576,15 +576,15 @@ nav a:hover {
 }
 
 /* Fix Contact Layout Spacing */
-#contact .panel {
+.contact .panel {
   padding: 2rem;
 }
 
-#contact .contact-card {
+.contact .contact-card {
   height: fit-content;
 }
 
-#contact {
+.contact {
   gap: 2rem;
 }
 /* Contact Card Layout Fix */
@@ -661,7 +661,7 @@ nav a:hover {
 }
 
 /* Match height of both contact cards */
-#contact {
+.contact {
   align-items: stretch; /* force both sides to equal height */
 }
 
