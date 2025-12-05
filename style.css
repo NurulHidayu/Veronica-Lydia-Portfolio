@@ -133,71 +133,74 @@ nav a:hover { background: var(--accent-soft); color: white; }
 .section-title span { color: var(--accent); }
 .about-text { color: var(--muted); margin-top: 0.4rem; }
 
-/* PREMIUM PROFILE SECTION UPGRADE */
+/* ===========================
+   PREMIUM PROFILE HERO DESIGN
+   =========================== */
+
 .panel-right {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
-}
-
-.photo-card {
-  text-align: center;
+  padding: 30px 10px;
   position: relative;
-  margin-top: 20px;
 }
 
+/* Floating neon glow behind image */
+.photo-glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(0,255,255,0.35), transparent 70%);
+  filter: blur(40px);
+  z-index: -2;
+  animation: softPulse 4s ease-in-out infinite;
+}
+
+/* Wrap image */
 .photo-wrapper {
-  max-width: 230px;
+  max-width: 240px;
   margin: auto;
   position: relative;
 }
 
+/* Premium hex style */
 .hex {
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
   overflow: hidden;
-  position: relative;
-  transition: 0.5s ease;
   border-radius: 20px;
+  transition: 0.5s ease;
+  border: 3px solid rgba(0,255,255,0.6);
+  box-shadow: 0 0 30px rgba(0,255,255,0.35);
 }
 
-/* Floating hover effect */
-.photo-card:hover .hex {
-  transform: translateY(-12px) scale(1.05);
-}
-
-/* Neon animated glow behind the photo */
-.hex::before {
-  content: "";
-  position: absolute;
-  inset: -25px;
-  background: radial-gradient(circle, rgba(3,225,255,0.45), transparent 70%);
-  z-index: -1;
-  animation: auraPulse 4s ease-in-out infinite;
-  filter: blur(20px);
-}
-
-@keyframes auraPulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
-}
-
-/* Photo soft shadow */
+/* Image styling */
 .hex img {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 0 10px rgba(3,225,255,0.35));
+  filter: drop-shadow(0 0 8px rgba(0,255,255,0.3));
 }
 
-/* Professional subtitle */
-.photo-name {
+/* Hover effect */
+.photo-card:hover .hex {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 0 40px rgba(0,255,255,0.55);
+}
+
+/* Text under photo */
+.photo-role {
   margin-top: 1rem;
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-  color: var(--muted);
-  text-align: center;
+  font-size: 1rem;
   font-weight: 500;
+  letter-spacing: 0.6px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Soft glowing pulse animation */
+@keyframes softPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
 }
 
 .card-section { background: var(--bg-soft); border-radius: var(--radius-lg); padding: 1.5rem; }
