@@ -453,7 +453,6 @@ footer {
   box-shadow: var(--shadow-soft);
 }
 
-
 /* ================= RESPONSIVE ================= */
 
 @media(max-width: 900px) {
